@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F70065322F44B4D677CF65C /* Pods_WalaokeRemoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783A03DDC32375B31251A8DA /* Pods_WalaokeRemoteUITests.framework */; };
+		859A86504040B4D90A9354A5 /* Pods_WalaokeRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5251542861C235BED130339 /* Pods_WalaokeRemote.framework */; };
 		8836AE501DB5F687003186F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE4F1DB5F687003186F0 /* AppDelegate.swift */; };
 		8836AE521DB5F687003186F0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE511DB5F687003186F0 /* FirstViewController.swift */; };
 		8836AE541DB5F687003186F0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE531DB5F687003186F0 /* SecondViewController.swift */; };
 		8836AE571DB5F687003186F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE551DB5F687003186F0 /* Main.storyboard */; };
 		8836AE591DB5F687003186F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE581DB5F687003186F0 /* Assets.xcassets */; };
 		8836AE5C1DB5F687003186F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE5A1DB5F687003186F0 /* LaunchScreen.storyboard */; };
-		8836AE671DB5F687003186F0 /* WalaokeRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE661DB5F687003186F0 /* WalaokeRemoteTests.swift */; };
+		8836AE671DB5F687003186F0 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE661DB5F687003186F0 /* CommandTests.swift */; };
 		8836AE721DB5F687003186F0 /* WalaokeRemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE711DB5F687003186F0 /* WalaokeRemoteUITests.swift */; };
+		8836AE801DB5F71C003186F0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE7F1DB5F71C003186F0 /* Podfile */; };
+		8836AE851DBCB0CF003186F0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE841DBCB0CF003186F0 /* Song.swift */; };
+		8836AE871DBD2AE4003186F0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE861DBD2AE4003186F0 /* Command.swift */; };
+		8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE881DBD2BFC003186F0 /* SearchCommand.swift */; };
+		88CC24701DBD3EA300EACF32 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC246F1DBD3EA300EACF32 /* Communicator.swift */; };
+		BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FC52045B8565F2DD13D3C87 /* Pods-WalaokeRemoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteUITests/Pods-WalaokeRemoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		45EAC92C8DD1942920A5D848 /* Pods-WalaokeRemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteUITests/Pods-WalaokeRemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63433F54703185AEEBBBB899 /* Pods-WalaokeRemoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		783A03DDC32375B31251A8DA /* Pods_WalaokeRemoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE4C1DB5F687003186F0 /* WalaokeRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalaokeRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE4F1DB5F687003186F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8836AE511DB5F687003186F0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +56,21 @@
 		8836AE5B1DB5F687003186F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8836AE5D1DB5F687003186F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8836AE621DB5F687003186F0 /* WalaokeRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalaokeRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8836AE661DB5F687003186F0 /* WalaokeRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalaokeRemoteTests.swift; sourceTree = "<group>"; };
+		8836AE661DB5F687003186F0 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
 		8836AE681DB5F687003186F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8836AE6D1DB5F687003186F0 /* WalaokeRemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalaokeRemoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE711DB5F687003186F0 /* WalaokeRemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalaokeRemoteUITests.swift; sourceTree = "<group>"; };
 		8836AE731DB5F687003186F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8836AE7F1DB5F71C003186F0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8836AE841DBCB0CF003186F0 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Models/Song.swift; sourceTree = "<group>"; };
+		8836AE861DBD2AE4003186F0 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Models/Command.swift; sourceTree = "<group>"; };
+		8836AE881DBD2BFC003186F0 /* SearchCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCommand.swift; path = Models/SearchCommand.swift; sourceTree = "<group>"; };
+		88CC246F1DBD3EA300EACF32 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Communicator.swift; path = Models/Communicator.swift; sourceTree = "<group>"; };
+		A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.release.xcconfig"; sourceTree = "<group>"; };
+		CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5251542861C235BED130339 /* Pods_WalaokeRemote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C70269DD44B7E56CF966D0 /* Pods-WalaokeRemote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859A86504040B4D90A9354A5 /* Pods_WalaokeRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +94,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F70065322F44B4D677CF65C /* Pods_WalaokeRemoteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87F9A5A9F726608CB3E6E371 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5251542861C235BED130339 /* Pods_WalaokeRemote.framework */,
+				CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */,
+				783A03DDC32375B31251A8DA /* Pods_WalaokeRemoteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8836AE431DB5F686003186F0 = {
 			isa = PBXGroup;
 			children = (
+				8836AE7F1DB5F71C003186F0 /* Podfile */,
 				8836AE4E1DB5F687003186F0 /* WalaokeRemote */,
 				8836AE651DB5F687003186F0 /* WalaokeRemoteTests */,
 				8836AE701DB5F687003186F0 /* WalaokeRemoteUITests */,
 				8836AE4D1DB5F687003186F0 /* Products */,
+				CEE0D3EB31BB4A77F320DE78 /* Pods */,
+				87F9A5A9F726608CB3E6E371 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +137,7 @@
 		8836AE4E1DB5F687003186F0 /* WalaokeRemote */ = {
 			isa = PBXGroup;
 			children = (
+				8836AE811DB5F89F003186F0 /* Models */,
 				8836AE4F1DB5F687003186F0 /* AppDelegate.swift */,
 				8836AE511DB5F687003186F0 /* FirstViewController.swift */,
 				8836AE531DB5F687003186F0 /* SecondViewController.swift */,
@@ -113,7 +152,7 @@
 		8836AE651DB5F687003186F0 /* WalaokeRemoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				8836AE661DB5F687003186F0 /* WalaokeRemoteTests.swift */,
+				8836AE661DB5F687003186F0 /* CommandTests.swift */,
 				8836AE681DB5F687003186F0 /* Info.plist */,
 			);
 			path = WalaokeRemoteTests;
@@ -128,6 +167,30 @@
 			path = WalaokeRemoteUITests;
 			sourceTree = "<group>";
 		};
+		8836AE811DB5F89F003186F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8836AE841DBCB0CF003186F0 /* Song.swift */,
+				8836AE861DBD2AE4003186F0 /* Command.swift */,
+				8836AE881DBD2BFC003186F0 /* SearchCommand.swift */,
+				88CC246F1DBD3EA300EACF32 /* Communicator.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CEE0D3EB31BB4A77F320DE78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7C70269DD44B7E56CF966D0 /* Pods-WalaokeRemote.debug.xcconfig */,
+				B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */,
+				63433F54703185AEEBBBB899 /* Pods-WalaokeRemoteTests.debug.xcconfig */,
+				A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */,
+				45EAC92C8DD1942920A5D848 /* Pods-WalaokeRemoteUITests.debug.xcconfig */,
+				2FC52045B8565F2DD13D3C87 /* Pods-WalaokeRemoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8836AE761DB5F687003186F0 /* Build configuration list for PBXNativeTarget "WalaokeRemote" */;
 			buildPhases = (
+				10AF30DC3D2C1F8B1545A3E4 /* [CP] Check Pods Manifest.lock */,
 				8836AE481DB5F686003186F0 /* Sources */,
 				8836AE491DB5F686003186F0 /* Frameworks */,
 				8836AE4A1DB5F686003186F0 /* Resources */,
+				B955F12D4F9FF8DC36A94AB5 /* [CP] Embed Pods Frameworks */,
+				5F94F11CE1AA30CCC2FC06D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8836AE791DB5F687003186F0 /* Build configuration list for PBXNativeTarget "WalaokeRemoteTests" */;
 			buildPhases = (
+				AE054DD60D70C3FD96B333A7 /* [CP] Check Pods Manifest.lock */,
 				8836AE5E1DB5F687003186F0 /* Sources */,
 				8836AE5F1DB5F687003186F0 /* Frameworks */,
 				8836AE601DB5F687003186F0 /* Resources */,
+				8353D939A40F2A462E167981 /* [CP] Embed Pods Frameworks */,
+				B53BDA47BD201BFA89AD9638 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8836AE7C1DB5F687003186F0 /* Build configuration list for PBXNativeTarget "WalaokeRemoteUITests" */;
 			buildPhases = (
+				511416FD6746D44762FE5EF0 /* [CP] Check Pods Manifest.lock */,
 				8836AE691DB5F687003186F0 /* Sources */,
 				8836AE6A1DB5F687003186F0 /* Frameworks */,
 				8836AE6B1DB5F687003186F0 /* Resources */,
+				6C9CAD96B79C846BC7AA0FB5 /* [CP] Copy Pods Resources */,
+				A2A155C8863A00A791DD9A00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +312,7 @@
 			files = (
 				8836AE5C1DB5F687003186F0 /* LaunchScreen.storyboard in Resources */,
 				8836AE591DB5F687003186F0 /* Assets.xcassets in Resources */,
+				8836AE801DB5F71C003186F0 /* Podfile in Resources */,
 				8836AE571DB5F687003186F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,13 +333,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10AF30DC3D2C1F8B1545A3E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		511416FD6746D44762FE5EF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F94F11CE1AA30CCC2FC06D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9CAD96B79C846BC7AA0FB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemoteUITests/Pods-WalaokeRemoteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8353D939A40F2A462E167981 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A155C8863A00A791DD9A00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemoteUITests/Pods-WalaokeRemoteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE054DD60D70C3FD96B333A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B53BDA47BD201BFA89AD9638 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B955F12D4F9FF8DC36A94AB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8836AE481DB5F686003186F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8836AE851DBCB0CF003186F0 /* Song.swift in Sources */,
+				8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */,
+				88CC24701DBD3EA300EACF32 /* Communicator.swift in Sources */,
 				8836AE541DB5F687003186F0 /* SecondViewController.swift in Sources */,
 				8836AE501DB5F687003186F0 /* AppDelegate.swift in Sources */,
+				8836AE871DBD2AE4003186F0 /* Command.swift in Sources */,
 				8836AE521DB5F687003186F0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8836AE671DB5F687003186F0 /* WalaokeRemoteTests.swift in Sources */,
+				8836AE671DB5F687003186F0 /* CommandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +632,9 @@
 		};
 		8836AE771DB5F687003186F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7C70269DD44B7E56CF966D0 /* Pods-WalaokeRemote.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U7J9GRDHWQ;
 				INFOPLIST_FILE = WalaokeRemote/Info.plist;
@@ -430,7 +647,9 @@
 		};
 		8836AE781DB5F687003186F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U7J9GRDHWQ;
 				INFOPLIST_FILE = WalaokeRemote/Info.plist;
@@ -443,6 +662,7 @@
 		};
 		8836AE7A1DB5F687003186F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63433F54703185AEEBBBB899 /* Pods-WalaokeRemoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +678,7 @@
 		};
 		8836AE7B1DB5F687003186F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +694,7 @@
 		};
 		8836AE7D1DB5F687003186F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45EAC92C8DD1942920A5D848 /* Pods-WalaokeRemoteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U7J9GRDHWQ;
@@ -487,6 +709,7 @@
 		};
 		8836AE7E1DB5F687003186F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC52045B8565F2DD13D3C87 /* Pods-WalaokeRemoteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U7J9GRDHWQ;
@@ -518,6 +741,7 @@
 				8836AE781DB5F687003186F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8836AE791DB5F687003186F0 /* Build configuration list for PBXNativeTarget "WalaokeRemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +750,7 @@
 				8836AE7B1DB5F687003186F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8836AE7C1DB5F687003186F0 /* Build configuration list for PBXNativeTarget "WalaokeRemoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +759,7 @@
 				8836AE7E1DB5F687003186F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
