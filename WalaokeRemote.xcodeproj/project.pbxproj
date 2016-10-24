@@ -22,6 +22,8 @@
 		8836AE871DBD2AE4003186F0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE861DBD2AE4003186F0 /* Command.swift */; };
 		8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE881DBD2BFC003186F0 /* SearchCommand.swift */; };
 		88CC24701DBD3EA300EACF32 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC246F1DBD3EA300EACF32 /* Communicator.swift */; };
+		88CC24731DBE66F700EACF32 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24721DBE66F700EACF32 /* json.txt */; };
+		88CC24751DBE670D00EACF32 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24741DBE670D00EACF32 /* notes.txt */; };
 		BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		8836AE861DBD2AE4003186F0 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Models/Command.swift; sourceTree = "<group>"; };
 		8836AE881DBD2BFC003186F0 /* SearchCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCommand.swift; path = Models/SearchCommand.swift; sourceTree = "<group>"; };
 		88CC246F1DBD3EA300EACF32 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Communicator.swift; path = Models/Communicator.swift; sourceTree = "<group>"; };
+		88CC24721DBE66F700EACF32 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.txt; path = Notes/json.txt; sourceTree = "<group>"; };
+		88CC24741DBE670D00EACF32 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = notes.txt; path = Notes/notes.txt; sourceTree = "<group>"; };
 		A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.release.xcconfig"; sourceTree = "<group>"; };
 		CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,7 @@
 		8836AE4E1DB5F687003186F0 /* WalaokeRemote */ = {
 			isa = PBXGroup;
 			children = (
+				88CC24711DBE669500EACF32 /* Notes */,
 				8836AE811DB5F89F003186F0 /* Models */,
 				8836AE4F1DB5F687003186F0 /* AppDelegate.swift */,
 				8836AE511DB5F687003186F0 /* FirstViewController.swift */,
@@ -176,6 +181,15 @@
 				88CC246F1DBD3EA300EACF32 /* Communicator.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		88CC24711DBE669500EACF32 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				88CC24721DBE66F700EACF32 /* json.txt */,
+				88CC24741DBE670D00EACF32 /* notes.txt */,
+			);
+			name = Notes;
 			sourceTree = "<group>";
 		};
 		CEE0D3EB31BB4A77F320DE78 /* Pods */ = {
@@ -310,10 +324,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CC24751DBE670D00EACF32 /* notes.txt in Resources */,
 				8836AE5C1DB5F687003186F0 /* LaunchScreen.storyboard in Resources */,
 				8836AE591DB5F687003186F0 /* Assets.xcassets in Resources */,
 				8836AE801DB5F71C003186F0 /* Podfile in Resources */,
 				8836AE571DB5F687003186F0 /* Main.storyboard in Resources */,
+				88CC24731DBE66F700EACF32 /* json.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

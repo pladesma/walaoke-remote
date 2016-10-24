@@ -1,0 +1,713 @@
+{
+  "params": {
+    "list": 0,
+    "keyword": "drake",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 8
+}<EOM>
+
+{
+  "id": 8,
+  "result": [
+    {
+      "sid": 1000002,
+      "title": "SSP047-04 - Drake - One Dance",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "s",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 9
+}<EOM>
+
+{
+  "id": 9,
+  "result": [
+    {
+      "sid": 1000002,
+      "title": "SSP047-04 - Drake - One Dance",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000006,
+      "title": "SSP047-02 - Shawn Mendes - Treat You Better",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000008,
+      "title": "SSP047-03 - Twenty One Pilots - Ride",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000010,
+      "title": "SSP047-05 - DNCE - Toothbrush",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000012,
+      "title": "SSP047-06 - Meghan Trainor - Me Too",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000014,
+      "title": "SSP047-07 - Fitz & The Tantrums - HandClap",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000018,
+      "title": "SSP047-09 - Katy Perry - Rise",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "sia",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 10
+}<EOM>
+
+{
+  "id": 10,
+  "result": [
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "sia",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 11
+}<EOM>
+
+{
+  "id": 11,
+  "result": [
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 12
+}<EOM>
+
+{
+  "id": 12,
+  "result": [
+    {
+      "sid": 1000002,
+      "title": "SSP047-04 - Drake - One Dance",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000006,
+      "title": "SSP047-02 - Shawn Mendes - Treat You Better",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000008,
+      "title": "SSP047-03 - Twenty One Pilots - Ride",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000010,
+      "title": "SSP047-05 - DNCE - Toothbrush",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000012,
+      "title": "SSP047-06 - Meghan Trainor - Me Too",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000014,
+      "title": "SSP047-07 - Fitz & The Tantrums - HandClap",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000018,
+      "title": "SSP047-09 - Katy Perry - Rise",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "adele",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 13
+}<EOM>
+
+{
+  "id": 13,
+  "result": [
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 14
+}<EOM>
+
+{
+  "id": 14,
+  "result": [
+    {
+      "sid": 1000002,
+      "title": "SSP047-04 - Drake - One Dance",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000006,
+      "title": "SSP047-02 - Shawn Mendes - Treat You Better",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000008,
+      "title": "SSP047-03 - Twenty One Pilots - Ride",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000010,
+      "title": "SSP047-05 - DNCE - Toothbrush",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000012,
+      "title": "SSP047-06 - Meghan Trainor - Me Too",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000014,
+      "title": "SSP047-07 - Fitz & The Tantrums - HandClap",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000018,
+      "title": "SSP047-09 - Katy Perry - Rise",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "adele",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 15
+}<EOM>
+
+{
+  "id": 15,
+  "result": [
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "list": 0,
+    "keyword": "",
+    "num": 20,
+    "findnext": false
+  },
+  "method": "searchSongs",
+  "id": 16
+}<EOM>
+
+{
+  "id": 16,
+  "result": [
+    {
+      "sid": 1000002,
+      "title": "SSP047-04 - Drake - One Dance",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000004,
+      "title": "SSP047-01 - Sia - Cheap Thrills",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000006,
+      "title": "SSP047-02 - Shawn Mendes - Treat You Better",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000008,
+      "title": "SSP047-03 - Twenty One Pilots - Ride",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000010,
+      "title": "SSP047-05 - DNCE - Toothbrush",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000012,
+      "title": "SSP047-06 - Meghan Trainor - Me Too",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000014,
+      "title": "SSP047-07 - Fitz & The Tantrums - HandClap",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000018,
+      "title": "SSP047-09 - Katy Perry - Rise",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "type": "",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "params": {
+    "command": "ADD_SONG",
+    "SID": "1000016"
+  },
+  "method": "sendCommand",
+  "id": 17
+}<EOM>
+
+{
+  "id": 2,
+  "jsonrpc": "2.0",
+  "method": "notifyPlaylistChanged"
+}<EOM>
+
+{
+  "id": 17,
+  "result": 0
+}<EOM>
+
+{
+  "method": "getPlaylist",
+  "id": 18
+}<EOM>
+
+{
+  "id": 18,
+  "result": [
+    {
+      "sid": 2,
+      "title": "SSP047-02 - Shawn Mendes - Treat You Better",
+      "path": "E:\\Karaoke Songs\\SSP047-02 - Shawn Mendes - Treat You Better\\SSP047-02 - Shawn Mendes - Treat You Better.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 3,
+      "title": "SSP047-03 - Twenty One Pilots - Ride",
+      "path": "E:\\Karaoke Songs\\SSP047-03 - Twenty One Pilots - Ride\\SSP047-03 - Twenty One Pilots - Ride.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 4,
+      "title": "SSP047-04 - Drake - One Dance",
+      "path": "E:\\Karaoke Songs\\SSP047-04 - Drake - One Dance\\SSP047-04 - Drake - One Dance.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 5,
+      "title": "SSP047-05 - DNCE - Toothbrush",
+      "path": "E:\\Karaoke Songs\\SSP047-05 - DNCE - Toothbrush\\SSP047-05 - DNCE - Toothbrush.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 6,
+      "title": "SSP047-06 - Meghan Trainor - Me Too",
+      "path": "E:\\Karaoke Songs\\SSP047-06 - Meghan Trainor - Me Too\\SSP047-06 - Meghan Trainor - Me Too.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 7,
+      "title": "SSP047-07 - Fitz & The Tantrums - HandClap",
+      "path": "E:\\Karaoke Songs\\SSP047-07 - Fitz & The Tantrums - HandClap\\SSP047-07 - Fitz & The Tantrums - HandClap.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 8,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "path": "E:\\Karaoke Songs\\SSP047-08 - Adele - Send My Love to Your New Lover\\SSP047-08 - Adele - Send My Love to Your New Lover.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 9,
+      "title": "SSP047-09 - Katy Perry - Rise",
+      "path": "E:\\Karaoke Songs\\SSP047-09 - Katy Perry - Rise\\SSP047-09 - Katy Perry - Rise.mp3",
+      "downloadable": false,
+      "downloaded": false
+    },
+    {
+      "sid": 1000016,
+      "title": "SSP047-08 - Adele - Send My Love to Your New Lover",
+      "path": "E:\\Karaoke Songs\\SSP047-08 - Adele - Send My Love to Your New Lover\\SSP047-08 - Adele - Send My Love to Your New Lover.mp3",
+      "author": "",
+      "singer": "",
+      "lyric": "",
+      "contentType": "MP3",
+      "downloadable": false,
+      "downloaded": false
+    }
+  ]
+}<EOM>
+
+{
+  "method": "getListOfSingers",
+  "id": 19
+}<EOM>
+
+{
+  "id": 19,
+  "result": [
+    ""
+  ]
+}<EOM>
