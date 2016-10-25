@@ -116,7 +116,7 @@ class Library: NSObject {
     
     public func queueSongLast(song: Song) -> Promise<Bool> {
         let command = QueueLastCommand(JSONString: "{}")
-        command?.sid = "1000004"
+        command?.sid = "\(song.sid!)"
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
@@ -124,13 +124,8 @@ class Library: NSObject {
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
-            let response = client?.read(1024 * 10)
-            
-            if (response != nil) {
-                if let str = String(bytes: response!, encoding: .utf8) {
-                    print(str)
-                }
-            }
+            let stringResponse = readResponse()
+            print(stringResponse)
             
             print("Queued song last.")
             return Promise(value: true)
