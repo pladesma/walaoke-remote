@@ -15,6 +15,8 @@ class PlaylistTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTabBar()
     }
     
     private func setupTabBar() {

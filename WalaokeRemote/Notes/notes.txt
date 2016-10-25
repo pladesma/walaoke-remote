@@ -1,22 +1,15 @@
-No core data
-
 Browse/search songs:
     Search for N songs
     Infinite scroll
     "list" == offset?
     "num" == limit?
 
-Search songs:
-    Filter existing list with keyword
-    Merge filtered results with results from API
-
-Tap song to add to end of queue
 Swipe left to reveal buttons
     Add to beginning of queue
     Add to end of queue
 
-
-Check if connection is made - error checking
-Tab bar icons
 Pull to refresh
-Auto-connect to last successful connection (keychain)
+
+API research:
+Move to front of queue
+Remove from queue

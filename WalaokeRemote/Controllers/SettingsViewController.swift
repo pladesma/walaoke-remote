@@ -18,6 +18,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let library = Library.sharedInstance
+        ipField.text = library.ip
+        portField.text = "\(library.port!)"
     }
 
     @IBAction func tappedConnectButton(_ sender: AnyObject) {

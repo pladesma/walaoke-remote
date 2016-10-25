@@ -41,6 +41,11 @@ class Library: NSObject {
         if (success) {
             print("Connected to server.")
             connected = true
+            
+            let defaults = UserDefaults.standard
+            defaults.set(ip, forKey: "ip")
+            defaults.set(port, forKey: "port")
+            
             return Promise(value: true)
         }
         
