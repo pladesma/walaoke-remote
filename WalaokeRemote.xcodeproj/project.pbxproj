@@ -31,6 +31,7 @@
 		88CC24C41DBEFD5200EACF32 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24BF1DBEFD5200EACF32 /* ytcpsocket.swift */; };
 		88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C01DBEFD5200EACF32 /* yudpsocket.c */; };
 		88CC24C61DBEFD5200EACF32 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */; };
+		88DE751D1DBFECB700A75E02 /* GetPlaylistCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */; };
 		BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		88CC24BF1DBEFD5200EACF32 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 		88CC24C01DBEFD5200EACF32 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPlaylistCommand.swift; path = Models/GetPlaylistCommand.swift; sourceTree = "<group>"; };
 		A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.release.xcconfig"; sourceTree = "<group>"; };
 		CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,7 @@
 				8836AE881DBD2BFC003186F0 /* SearchCommand.swift */,
 				88CC246F1DBD3EA300EACF32 /* Library.swift */,
 				88A70F071DBFAE6900F1E52F /* QueueLastCommand.swift */,
+				88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */,
 				88CC24C21DBEFD5200EACF32 /* ysocket.swift in Sources */,
 				88CC24C31DBEFD5200EACF32 /* ytcpsocket.c in Sources */,
+				88DE751D1DBFECB700A75E02 /* GetPlaylistCommand.swift in Sources */,
 				88CC247C1DBEF1A400EACF32 /* SettingsViewController.swift in Sources */,
 				88CC24781DBEF17B00EACF32 /* SongsTableViewController.swift in Sources */,
 				88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */,

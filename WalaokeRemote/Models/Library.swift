@@ -15,6 +15,7 @@ import ObjectMapper
 class Library: NSObject {
     public var ip: String?
     public var port: Int?
+    public var connected = false
     
     private var client: TCPClient?
     
@@ -39,6 +40,7 @@ class Library: NSObject {
         
         if (success) {
             print("Connected to server.")
+            connected = true
             return Promise(value: true)
         }
         
@@ -136,6 +138,37 @@ class Library: NSObject {
     }
     
     public func getPlaylist() -> Promise<Array<Song>> {
+        let command = GetPlaylistCommand(JSONString: "{}")
+        command?.id = getNextId()
+        
+        let jsonString = command?.toJSONString()
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            print("Retrieved playlist.")
+            
+            let stringResponse = readResponse()
+            if let data = stringResponse.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8) {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
+                    
+                    var songs = Array<Song>()
+                    
+                    if let results = json["result"] as? Array<[String: AnyObject]> {
+                        for dict in results {
+                            let song = Song(JSON: dict)
+                            songs.append(song!)
+                        }
+                    }
+                    
+                    return Promise(value: songs)
+                } catch {
+                    print("Error serializing JSON.")
+                }
+            }
+        }
+        
+        print(errmsg)
         return Promise(value: Array<Song>())
     }
     

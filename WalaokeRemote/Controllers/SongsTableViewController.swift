@@ -37,6 +37,10 @@ class SongsTableViewController: UITableViewController {
     }
     
     func refreshSongs() {
+        if !Library.sharedInstance.connected {
+            return
+        }
+        
         Library.sharedInstance.browseSongs().then { songs -> Void in
             self.processSongResults(songs: songs)
             self.tableView.reloadData()
@@ -73,8 +77,7 @@ class SongsTableViewController: UITableViewController {
         
         let song = songForRow(row: indexPath.row)
 
-        cell.textLabel?.text = song.singer
-        cell.detailTextLabel?.text = song.title
+        cell.textLabel?.text = song.title
         
         return cell
     }
