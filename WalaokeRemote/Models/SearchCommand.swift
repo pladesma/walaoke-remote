@@ -42,7 +42,8 @@ class SearchCommand: Command {
     func setupParams() {
         params["keyword"] = "" as AnyObject?
         params["list"] = 0 as AnyObject?
-        params["num"] = 20 as AnyObject?
+        params["num"] = 30 as AnyObject?
         params["findnext"] = false as AnyObject?
     }
+
 }

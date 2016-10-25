@@ -38,12 +38,16 @@ class Library: NSObject {
         let (success, errmsg) = client!.connect(timeout: 10)
         
         if (success) {
-            print("Successfully connected to server.")
+            print("Connected to server.")
             return Promise(value: true)
         }
         
         print(errmsg)
         return Promise(value: false)
+    }
+    
+    public func browseSongs() -> Promise<Array<Song>> {
+        return searchSongs(keyword: "")
     }
     
     public func searchSongs(keyword: String?) -> Promise<Array<Song>> {
@@ -57,27 +61,25 @@ class Library: NSObject {
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
-            print("Successfully searched for songs.")
+            print("Searched for songs.")
             
-            let response = client?.read(1024 * 10)
-            
-            if (response != nil) {
-                if let str = String(bytes: response!, encoding: .utf8) {
-                    let data = str.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8)
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
-                        
-                        var songs = Array<Song>()
-                        
-                        for dict in json["result"] as! Array<[String: AnyObject]> {
+            let stringResponse = readResponse()
+            if let data = stringResponse.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8) {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
+                    
+                    var songs = Array<Song>()
+                    
+                    if let results = json["result"] as? Array<[String: AnyObject]> {
+                        for dict in results {
                             let song = Song(JSON: dict)
                             songs.append(song!)
                         }
-                        
-                        return Promise(value: songs)
-                    } catch {
-                        print("Error serializing JSON.")
                     }
+                    
+                    return Promise(value: songs)
+                } catch {
+                    print("Error serializing JSON.")
                 }
             }
         }
@@ -92,16 +94,50 @@ class Library: NSObject {
         return nextId
     }
     
-    public func browseSongs() -> Promise<Array<Song>> {
-        return searchSongs(keyword: "")
+    func readResponse() -> String {
+        var string = ""
+        
+        while !string.contains("<EOM>") {
+            let response = client?.read(1024 * 10)
+            if response != nil {
+                if let str = String(bytes: response!, encoding: .utf8) {
+                    string.append(str)
+                }
+            }
+        }
+        
+        print(string)
+        return string
     }
     
     public func queueSongFirst(song: Song) {
         
     }
     
-    public func queueSongLast(song: Song) {
+    public func queueSongLast(song: Song) -> Promise<Bool> {
+        let command = QueueLastCommand(JSONString: "{}")
+        command?.sid = String(describing: song.sid)
+        command?.id = getNextId()
         
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            let response = client?.read(1024 * 10)
+            
+            if (response != nil) {
+                if let str = String(bytes: response!, encoding: .utf8) {
+                    print(str)
+                }
+            }
+            
+            print("Queued song last.")
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
     }
     
     public func getPlaylist() -> Promise<Array<Song>> {

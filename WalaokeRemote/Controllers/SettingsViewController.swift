@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
         
         library.connectToServer().then { connected -> Void in
             if (connected) {
-                self.view.makeToast("Connected", duration: 2.0, position: .top)
+                self.view.makeToast("Connected", duration: 2.0, position: .center)
             } else {
                 let alert = UIAlertController(title: "Error", message: "Failed to connect to server.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))

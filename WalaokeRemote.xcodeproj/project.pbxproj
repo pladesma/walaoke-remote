@@ -18,6 +18,8 @@
 		8836AE851DBCB0CF003186F0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE841DBCB0CF003186F0 /* Song.swift */; };
 		8836AE871DBD2AE4003186F0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE861DBD2AE4003186F0 /* Command.swift */; };
 		8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE881DBD2BFC003186F0 /* SearchCommand.swift */; };
+		88A70F081DBFAE6900F1E52F /* QueueLastCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A70F071DBFAE6900F1E52F /* QueueLastCommand.swift */; };
+		88A70F0A1DBFB60800F1E52F /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A70F091DBFB60800F1E52F /* LibraryTests.swift */; };
 		88CC24701DBD3EA300EACF32 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC246F1DBD3EA300EACF32 /* Library.swift */; };
 		88CC24731DBE66F700EACF32 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24721DBE66F700EACF32 /* json.txt */; };
 		88CC24751DBE670D00EACF32 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24741DBE670D00EACF32 /* notes.txt */; };
@@ -69,6 +71,8 @@
 		8836AE841DBCB0CF003186F0 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Models/Song.swift; sourceTree = "<group>"; };
 		8836AE861DBD2AE4003186F0 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Models/Command.swift; sourceTree = "<group>"; };
 		8836AE881DBD2BFC003186F0 /* SearchCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCommand.swift; path = Models/SearchCommand.swift; sourceTree = "<group>"; };
+		88A70F071DBFAE6900F1E52F /* QueueLastCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueLastCommand.swift; path = Models/QueueLastCommand.swift; sourceTree = "<group>"; };
+		88A70F091DBFB60800F1E52F /* LibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		88CC246F1DBD3EA300EACF32 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = Models/Library.swift; sourceTree = "<group>"; };
 		88CC24721DBE66F700EACF32 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.txt; path = Notes/json.txt; sourceTree = "<group>"; };
 		88CC24741DBE670D00EACF32 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = notes.txt; path = Notes/notes.txt; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				8836AE661DB5F687003186F0 /* CommandTests.swift */,
 				8836AE681DB5F687003186F0 /* Info.plist */,
+				88A70F091DBFB60800F1E52F /* LibraryTests.swift */,
 			);
 			path = WalaokeRemoteTests;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				8836AE861DBD2AE4003186F0 /* Command.swift */,
 				8836AE881DBD2BFC003186F0 /* SearchCommand.swift */,
 				88CC246F1DBD3EA300EACF32 /* Library.swift */,
+				88A70F071DBFAE6900F1E52F /* QueueLastCommand.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CC24C41DBEFD5200EACF32 /* ytcpsocket.swift in Sources */,
+				88A70F081DBFAE6900F1E52F /* QueueLastCommand.swift in Sources */,
 				8836AE851DBCB0CF003186F0 /* Song.swift in Sources */,
 				88CC247A1DBEF18D00EACF32 /* PlaylistTableViewController.swift in Sources */,
 				8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */,
@@ -553,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8836AE671DB5F687003186F0 /* CommandTests.swift in Sources */,
+				88A70F0A1DBFB60800F1E52F /* LibraryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
