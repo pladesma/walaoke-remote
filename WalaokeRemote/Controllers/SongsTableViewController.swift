@@ -57,8 +57,8 @@ class SongsTableViewController: UITableViewController {
         Library.sharedInstance.browseSongs(offset: offset, limit: limit).then { songs -> Void in
             self.processSongResults(songs: songs)
             self.tableView.reloadData()
-            }.catch { error in
-                self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
+        }.catch { error in
+            self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
         }
     }
     
@@ -79,6 +79,10 @@ class SongsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemCount()
+    }
+    
+    private func itemCount() -> Int{
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredSongs.count
         }

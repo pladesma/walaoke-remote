@@ -57,13 +57,13 @@ class Library: NSObject {
     }
     
     public func searchSongs(keyword: String?, offset: Int, limit: Int) -> Promise<Array<Song>> {
-        let searchCommand = SearchCommand(JSONString: "{}")
-        searchCommand?.id = getNextId()
-        searchCommand?.keyword = keyword != nil ? keyword! : ""
-        searchCommand?.offset = offset
-        searchCommand?.limit = limit
+        let command = SearchCommand(JSONString: "{}")
+        command?.id = getNextId()
+        command?.keyword = keyword != nil ? keyword! : ""
+        command?.offset = offset
+        command?.limit = limit
         
-        let jsonString = searchCommand?.toJSONString()
+        let jsonString = command?.toJSONString()
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -71,7 +71,7 @@ class Library: NSObject {
             
             var json = readResponse()
             // This should be a < comparison
-            while json["id"] as? Int != searchCommand?.id {
+            while json["id"] as? Int != command?.id {
                 json = readResponse()
             }
             
