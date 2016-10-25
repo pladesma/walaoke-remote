@@ -20,7 +20,6 @@ class Library: NSObject {
     private var client: TCPClient?
     
     private var currentId = 0
-    private var commands = Array<Command>()
     
     static let sharedInstance = Library()
     
@@ -64,35 +63,30 @@ class Library: NSObject {
         searchCommand?.offset = offset
         searchCommand?.limit = limit
         
-        commands.append(searchCommand!)
-        
         let jsonString = searchCommand?.toJSONString()
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
             print("Searched for songs.")
             
-            let stringResponse = readResponse()
-            if let data = stringResponse.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8) {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
-                    
-                    var songs = Array<Song>()
-                    
-                    if let results = json["result"] as? Array<[String: AnyObject]> {
-                        for dict in results {
-                            let song = Song(JSON: dict)
-                            songs.append(song!)
-                        }
-                    }
-                    
-                    return Promise(value: songs)
-                } catch {
-                    print("Error serializing JSON.")
+            var json = readResponse()
+            // This should be a < comparison
+            while json["id"] as? Int != searchCommand?.id {
+                json = readResponse()
+            }
+            
+            var songs = Array<Song>()
+            
+            if let results = json["result"] as? Array<[String: AnyObject]> {
+                for dict in results {
+                    let song = Song(JSON: dict)
+                    songs.append(song!)
                 }
             }
+            
+            return Promise(value: songs)
         }
-        
+    
         print(errmsg)
         return Promise(value: Array<Song>())
     }
@@ -103,7 +97,7 @@ class Library: NSObject {
         return nextId
     }
     
-    private func readResponse() -> String {
+    private func readResponse() -> [String: Any] {
         var string = ""
         
         while !string.contains("<EOM>") {
@@ -116,7 +110,17 @@ class Library: NSObject {
         }
         
         print(string)
-        return string
+        
+        if let data = string.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8) {
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
+                return json
+            } catch {
+                print("Error serializing JSON.")
+            }
+        }
+        
+        return [String: Any]()
     }
     
     public func queueSongFirst(song: Song) {
@@ -154,29 +158,26 @@ class Library: NSObject {
         if (success) {
             print("Retrieved playlist.")
             
-            let stringResponse = readResponse()
-            if let data = stringResponse.replacingOccurrences(of: "<EOM>", with: "").data(using: .utf8) {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: AnyObject]
-                    
-                    var songs = Array<Song>()
-                    
-                    if let results = json["result"] as? Array<[String: AnyObject]> {
-                        for dict in results {
-                            let song = Song(JSON: dict)
-                            songs.append(song!)
-                        }
-                    }
-                    
-                    return Promise(value: songs)
-                } catch {
-                    print("Error serializing JSON.")
+            var json = readResponse()
+            // This should be a < comparison
+            while json["id"] as? Int != command?.id {
+                json = readResponse()
+            }
+            
+            var songs = Array<Song>()
+            
+            if let results = json["result"] as? Array<[String: AnyObject]> {
+                for dict in results {
+                    let song = Song(JSON: dict)
+                    songs.append(song!)
                 }
             }
+            
+            return Promise(value: songs)
         }
-        
+    
         print(errmsg)
         return Promise(value: Array<Song>())
     }
-    
+
 }
