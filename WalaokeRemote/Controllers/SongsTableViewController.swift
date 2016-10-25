@@ -21,6 +21,8 @@ class SongsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupSearchController()
+        
+        refreshControl?.addTarget(self, action: #selector(SongsTableViewController.handleRefresh), for: .valueChanged)
     }
     
     func setupSearchController() {
@@ -28,6 +30,11 @@ class SongsTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        refreshSongs()
+        refreshControl.endRefreshing()
     }
     
     override func viewDidAppear(_ animated: Bool) {

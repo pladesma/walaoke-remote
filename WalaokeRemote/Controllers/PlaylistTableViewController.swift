@@ -17,12 +17,19 @@ class PlaylistTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupTabBar()
+        
+        refreshControl?.addTarget(self, action: #selector(SongsTableViewController.handleRefresh), for: .valueChanged)
     }
     
     private func setupTabBar() {
         self.navigationController?.tabBarController?.tabBar.items?[0].image = UIImage.fontAwesomeIcon(name: .list, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
         self.navigationController?.tabBarController?.tabBar.items?[1].image = UIImage.fontAwesomeIcon(name: .music, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
         self.navigationController?.tabBarController?.tabBar.items?[2].image = UIImage.fontAwesomeIcon(name: .cog, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        refreshPlaylist()
+        refreshControl.endRefreshing()
     }
 
     override func viewDidAppear(_ animated: Bool) {

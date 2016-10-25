@@ -8,8 +8,6 @@ Swipe left to reveal buttons
     Add to beginning of queue
     Add to end of queue
 
-Pull to refresh
-
 API research:
 Move to front of queue
 Remove from queue
