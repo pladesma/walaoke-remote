@@ -7,6 +7,7 @@ def myPods
 	pod 'ObjectMapper', '~> 2.1'
     pod "PromiseKit", "~> 4.0"
     pod 'Toast-Swift', '~> 2.0.0'
+    pod 'FontAwesome.swift'
 end
 
 target 'WalaokeRemote' do

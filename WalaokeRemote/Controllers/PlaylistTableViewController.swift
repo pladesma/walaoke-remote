@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class PlaylistTableViewController: UITableViewController {
     
@@ -14,6 +15,12 @@ class PlaylistTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    private func setupTabBar() {
+        self.navigationController?.tabBarController?.tabBar.items?[0].image = UIImage.fontAwesomeIcon(name: .list, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
+        self.navigationController?.tabBarController?.tabBar.items?[1].image = UIImage.fontAwesomeIcon(name: .music, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
+        self.navigationController?.tabBarController?.tabBar.items?[2].image = UIImage.fontAwesomeIcon(name: .cog, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
     }
 
     override func viewDidAppear(_ animated: Bool) {
