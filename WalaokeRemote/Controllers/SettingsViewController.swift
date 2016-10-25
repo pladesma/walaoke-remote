@@ -21,7 +21,16 @@ class SettingsViewController: UIViewController {
         
         let library = Library.sharedInstance
         ipField.text = library.ip
-        portField.text = "\(library.port!)"
+        if library.port != nil {
+            portField.text = "\(library.port!)"
+        }
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func tappedConnectButton(_ sender: AnyObject) {
