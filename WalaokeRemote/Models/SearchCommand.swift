@@ -32,6 +32,17 @@ class SearchCommand: Command {
         }
     }
     
+    private var _limit = 0
+    var limit: Int {
+        set {
+            _limit = newValue
+            params["num"] = _limit
+        }
+        get {
+            return _limit
+        }
+    }
+    
     required init?(map: Map) {
         super.init(map: map)
         

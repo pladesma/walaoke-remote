@@ -53,14 +53,16 @@ class Library: NSObject {
         return Promise(value: false)
     }
     
-    public func browseSongs() -> Promise<Array<Song>> {
-        return searchSongs(keyword: "")
+    public func browseSongs(offset: Int, limit: Int) -> Promise<Array<Song>> {
+        return searchSongs(keyword: "", offset: offset, limit: limit)
     }
     
-    public func searchSongs(keyword: String?) -> Promise<Array<Song>> {
+    public func searchSongs(keyword: String?, offset: Int, limit: Int) -> Promise<Array<Song>> {
         let searchCommand = SearchCommand(JSONString: "{}")
         searchCommand?.id = getNextId()
         searchCommand?.keyword = keyword != nil ? keyword! : ""
+        searchCommand?.offset = offset
+        searchCommand?.limit = limit
         
         commands.append(searchCommand!)
         

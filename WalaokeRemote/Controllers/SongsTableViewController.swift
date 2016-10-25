@@ -16,6 +16,8 @@ class SongsTableViewController: UITableViewController {
     var filteredSongs = [Song]()
     
     let searchController = UISearchController(searchResultsController: nil)
+    
+    let searchLimit = 100
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +46,19 @@ class SongsTableViewController: UITableViewController {
     }
     
     func refreshSongs() {
+        browseSongs(offset: 0, limit: searchLimit)
+    }
+    
+    func browseSongs(offset: Int, limit: Int) {
         if !Library.sharedInstance.connected {
             return
         }
         
-        Library.sharedInstance.browseSongs().then { songs -> Void in
+        Library.sharedInstance.browseSongs(offset: offset, limit: limit).then { songs -> Void in
             self.processSongResults(songs: songs)
             self.tableView.reloadData()
-        }.catch { error in
-            self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
+            }.catch { error in
+                self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
         }
     }
     
@@ -113,11 +119,12 @@ class SongsTableViewController: UITableViewController {
                 self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
         }
     }
+    
 }
 
 extension SongsTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        Library.sharedInstance.searchSongs(keyword: searchController.searchBar.text).then { songs -> Void in
+        Library.sharedInstance.searchSongs(keyword: searchController.searchBar.text, offset: 0, limit: searchLimit).then { songs -> Void in
             self.processSongResults(songs: songs)
             self.filterSongs(searchText: searchController.searchBar.text!)
             self.tableView.reloadData()
