@@ -14,7 +14,7 @@ class SearchCommand: Command {
     var keyword: String {
         set {
             _keyword = newValue
-            params["keyword"] = _keyword as AnyObject?
+            params["keyword"] = _keyword
         }
         get {
             return _keyword
@@ -25,7 +25,7 @@ class SearchCommand: Command {
     var offset: Int {
         set {
             _offset = newValue
-            params["list"] = _offset as AnyObject?
+            params["list"] = _offset
         }
         get {
             return _offset
@@ -40,10 +40,10 @@ class SearchCommand: Command {
     }
     
     func setupParams() {
-        params["keyword"] = "" as AnyObject?
-        params["list"] = 0 as AnyObject?
-        params["num"] = 30 as AnyObject?
-        params["findnext"] = false as AnyObject?
+        params["keyword"] = ""
+        params["list"] = 0
+        params["num"] = 30
+        params["findnext"] = false
     }
 
 }

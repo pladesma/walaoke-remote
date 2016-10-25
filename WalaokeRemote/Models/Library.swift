@@ -16,10 +16,10 @@ class Library: NSObject {
     public var ip: String?
     public var port: Int?
     
-    var client: TCPClient?
+    private var client: TCPClient?
     
-    var currentId = 0
-    var commands = Array<Command>()
+    private var currentId = 0
+    private var commands = Array<Command>()
     
     static let sharedInstance = Library()
     
@@ -88,13 +88,13 @@ class Library: NSObject {
         return Promise(value: Array<Song>())
     }
     
-    func getNextId() -> Int {
+    private func getNextId() -> Int {
         let nextId = currentId
         currentId += 1
         return nextId
     }
     
-    func readResponse() -> String {
+    private func readResponse() -> String {
         var string = ""
         
         while !string.contains("<EOM>") {
@@ -116,7 +116,7 @@ class Library: NSObject {
     
     public func queueSongLast(song: Song) -> Promise<Bool> {
         let command = QueueLastCommand(JSONString: "{}")
-        command?.sid = String(describing: song.sid)
+        command?.sid = "1000004"
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()

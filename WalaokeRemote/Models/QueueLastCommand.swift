@@ -15,7 +15,7 @@ class QueueLastCommand: Command {
     var sid: String {
         set {
             _sid = newValue
-            params["SID"] = _sid as AnyObject?
+            params["SID"] = _sid
         }
         get {
             return _sid
@@ -30,6 +30,6 @@ class QueueLastCommand: Command {
     }
     
     func setupParams() {
-        params["command"] = "ADD_SONG" as AnyObject?
+        params["command"] = "ADD_SONG"
     }
 }

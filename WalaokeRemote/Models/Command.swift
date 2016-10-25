@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 class Command: Mappable {
-    var params = Dictionary<String, AnyObject>()
+    var params = Dictionary<String, Any>()
     var method: String?
     var id: Int?
     
