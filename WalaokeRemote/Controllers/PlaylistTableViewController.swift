@@ -59,7 +59,7 @@ class PlaylistTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell", for: indexPath)
 
         let song = songs[indexPath.row]
-        cell.textLabel?.text = song.title
+        cell.textLabel?.text = "\(indexPath.row + 1). \(song.title!)"
 
         return cell
     }
