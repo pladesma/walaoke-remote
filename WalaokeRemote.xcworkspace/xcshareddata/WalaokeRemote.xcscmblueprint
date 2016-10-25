@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6B5FDBD37CD743A445AF88687F3F8068AABF55D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6B5FDBD37CD743A445AF88687F3F8068AABF55D2" : 9223372036854775807,
+    "9BE9D417DFF2C108330E2C3DFD9D454205A39188" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C1D1842-9EEF-46FF-A2B1-D8B035EF914C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6B5FDBD37CD743A445AF88687F3F8068AABF55D2" : "WalaokeRemote\/",
+    "9BE9D417DFF2C108330E2C3DFD9D454205A39188" : "WalaokeRemote\/Libraries\/SwiftSocket\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WalaokeRemote",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WalaokeRemote.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/pladesma\/walaokeremote.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B5FDBD37CD743A445AF88687F3F8068AABF55D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/swiftsocket\/SwiftSocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BE9D417DFF2C108330E2C3DFD9D454205A39188"
+    }
+  ]
+}

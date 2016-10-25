@@ -10,12 +10,12 @@ import UIKit
 import ObjectMapper
 
 class Command: Mappable {
-    var params: Dictionary<String, AnyObject>?
+    var params = Dictionary<String, AnyObject>()
     var method: String?
     var id: Int?
     
     required init?(map: Map) {
-        
+       
     }
     
     func mapping(map: Map) {

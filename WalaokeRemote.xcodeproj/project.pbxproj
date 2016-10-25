@@ -10,20 +10,25 @@
 		1F70065322F44B4D677CF65C /* Pods_WalaokeRemoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783A03DDC32375B31251A8DA /* Pods_WalaokeRemoteUITests.framework */; };
 		859A86504040B4D90A9354A5 /* Pods_WalaokeRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5251542861C235BED130339 /* Pods_WalaokeRemote.framework */; };
 		8836AE501DB5F687003186F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE4F1DB5F687003186F0 /* AppDelegate.swift */; };
-		8836AE521DB5F687003186F0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE511DB5F687003186F0 /* FirstViewController.swift */; };
-		8836AE541DB5F687003186F0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE531DB5F687003186F0 /* SecondViewController.swift */; };
 		8836AE571DB5F687003186F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE551DB5F687003186F0 /* Main.storyboard */; };
 		8836AE591DB5F687003186F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE581DB5F687003186F0 /* Assets.xcassets */; };
 		8836AE5C1DB5F687003186F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE5A1DB5F687003186F0 /* LaunchScreen.storyboard */; };
 		8836AE671DB5F687003186F0 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE661DB5F687003186F0 /* CommandTests.swift */; };
 		8836AE721DB5F687003186F0 /* WalaokeRemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE711DB5F687003186F0 /* WalaokeRemoteUITests.swift */; };
-		8836AE801DB5F71C003186F0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8836AE7F1DB5F71C003186F0 /* Podfile */; };
 		8836AE851DBCB0CF003186F0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE841DBCB0CF003186F0 /* Song.swift */; };
 		8836AE871DBD2AE4003186F0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE861DBD2AE4003186F0 /* Command.swift */; };
 		8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836AE881DBD2BFC003186F0 /* SearchCommand.swift */; };
-		88CC24701DBD3EA300EACF32 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC246F1DBD3EA300EACF32 /* Communicator.swift */; };
+		88CC24701DBD3EA300EACF32 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC246F1DBD3EA300EACF32 /* Library.swift */; };
 		88CC24731DBE66F700EACF32 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24721DBE66F700EACF32 /* json.txt */; };
 		88CC24751DBE670D00EACF32 /* notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88CC24741DBE670D00EACF32 /* notes.txt */; };
+		88CC24781DBEF17B00EACF32 /* SongsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24771DBEF17B00EACF32 /* SongsTableViewController.swift */; };
+		88CC247A1DBEF18D00EACF32 /* PlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24791DBEF18D00EACF32 /* PlaylistTableViewController.swift */; };
+		88CC247C1DBEF1A400EACF32 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC247B1DBEF1A400EACF32 /* SettingsViewController.swift */; };
+		88CC24C21DBEFD5200EACF32 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24BD1DBEFD5200EACF32 /* ysocket.swift */; };
+		88CC24C31DBEFD5200EACF32 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24BE1DBEFD5200EACF32 /* ytcpsocket.c */; };
+		88CC24C41DBEFD5200EACF32 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24BF1DBEFD5200EACF32 /* ytcpsocket.swift */; };
+		88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C01DBEFD5200EACF32 /* yudpsocket.c */; };
+		88CC24C61DBEFD5200EACF32 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */; };
 		BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +56,6 @@
 		783A03DDC32375B31251A8DA /* Pods_WalaokeRemoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE4C1DB5F687003186F0 /* WalaokeRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalaokeRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE4F1DB5F687003186F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8836AE511DB5F687003186F0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8836AE531DB5F687003186F0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8836AE561DB5F687003186F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8836AE581DB5F687003186F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8836AE5B1DB5F687003186F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,13 +66,20 @@
 		8836AE6D1DB5F687003186F0 /* WalaokeRemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalaokeRemoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836AE711DB5F687003186F0 /* WalaokeRemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalaokeRemoteUITests.swift; sourceTree = "<group>"; };
 		8836AE731DB5F687003186F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8836AE7F1DB5F71C003186F0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8836AE841DBCB0CF003186F0 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Song.swift; path = Models/Song.swift; sourceTree = "<group>"; };
 		8836AE861DBD2AE4003186F0 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Models/Command.swift; sourceTree = "<group>"; };
 		8836AE881DBD2BFC003186F0 /* SearchCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCommand.swift; path = Models/SearchCommand.swift; sourceTree = "<group>"; };
-		88CC246F1DBD3EA300EACF32 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Communicator.swift; path = Models/Communicator.swift; sourceTree = "<group>"; };
+		88CC246F1DBD3EA300EACF32 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = Models/Library.swift; sourceTree = "<group>"; };
 		88CC24721DBE66F700EACF32 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json.txt; path = Notes/json.txt; sourceTree = "<group>"; };
 		88CC24741DBE670D00EACF32 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = notes.txt; path = Notes/notes.txt; sourceTree = "<group>"; };
+		88CC24771DBEF17B00EACF32 /* SongsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongsTableViewController.swift; path = Controllers/SongsTableViewController.swift; sourceTree = "<group>"; };
+		88CC24791DBEF18D00EACF32 /* PlaylistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaylistTableViewController.swift; path = Controllers/PlaylistTableViewController.swift; sourceTree = "<group>"; };
+		88CC247B1DBEF1A400EACF32 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
+		88CC24BD1DBEFD5200EACF32 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		88CC24BE1DBEFD5200EACF32 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		88CC24BF1DBEFD5200EACF32 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		88CC24C01DBEFD5200EACF32 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.release.xcconfig"; sourceTree = "<group>"; };
 		CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +128,7 @@
 		8836AE431DB5F686003186F0 = {
 			isa = PBXGroup;
 			children = (
-				8836AE7F1DB5F71C003186F0 /* Podfile */,
+				88CC24BB1DBEFD1D00EACF32 /* SwiftSocket */,
 				8836AE4E1DB5F687003186F0 /* WalaokeRemote */,
 				8836AE651DB5F687003186F0 /* WalaokeRemoteTests */,
 				8836AE701DB5F687003186F0 /* WalaokeRemoteUITests */,
@@ -141,15 +151,14 @@
 		8836AE4E1DB5F687003186F0 /* WalaokeRemote */ = {
 			isa = PBXGroup;
 			children = (
-				88CC24711DBE669500EACF32 /* Notes */,
-				8836AE811DB5F89F003186F0 /* Models */,
 				8836AE4F1DB5F687003186F0 /* AppDelegate.swift */,
-				8836AE511DB5F687003186F0 /* FirstViewController.swift */,
-				8836AE531DB5F687003186F0 /* SecondViewController.swift */,
-				8836AE551DB5F687003186F0 /* Main.storyboard */,
 				8836AE581DB5F687003186F0 /* Assets.xcassets */,
-				8836AE5A1DB5F687003186F0 /* LaunchScreen.storyboard */,
+				88CC24761DBEF14400EACF32 /* Controllers */,
 				8836AE5D1DB5F687003186F0 /* Info.plist */,
+				8836AE5A1DB5F687003186F0 /* LaunchScreen.storyboard */,
+				8836AE551DB5F687003186F0 /* Main.storyboard */,
+				8836AE811DB5F89F003186F0 /* Models */,
+				88CC24711DBE669500EACF32 /* Notes */,
 			);
 			path = WalaokeRemote;
 			sourceTree = "<group>";
@@ -178,7 +187,7 @@
 				8836AE841DBCB0CF003186F0 /* Song.swift */,
 				8836AE861DBD2AE4003186F0 /* Command.swift */,
 				8836AE881DBD2BFC003186F0 /* SearchCommand.swift */,
-				88CC246F1DBD3EA300EACF32 /* Communicator.swift */,
+				88CC246F1DBD3EA300EACF32 /* Library.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -190,6 +199,37 @@
 				88CC24741DBE670D00EACF32 /* notes.txt */,
 			);
 			name = Notes;
+			sourceTree = "<group>";
+		};
+		88CC24761DBEF14400EACF32 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88CC24791DBEF18D00EACF32 /* PlaylistTableViewController.swift */,
+				88CC247B1DBEF1A400EACF32 /* SettingsViewController.swift */,
+				88CC24771DBEF17B00EACF32 /* SongsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		88CC24BB1DBEFD1D00EACF32 /* SwiftSocket */ = {
+			isa = PBXGroup;
+			children = (
+				88CC24BC1DBEFD5200EACF32 /* ysocket */,
+			);
+			name = SwiftSocket;
+			sourceTree = "<group>";
+		};
+		88CC24BC1DBEFD5200EACF32 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				88CC24BD1DBEFD5200EACF32 /* ysocket.swift */,
+				88CC24BE1DBEFD5200EACF32 /* ytcpsocket.c */,
+				88CC24BF1DBEFD5200EACF32 /* ytcpsocket.swift */,
+				88CC24C01DBEFD5200EACF32 /* yudpsocket.c */,
+				88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */,
+			);
+			name = ysocket;
+			path = SwiftSocket/ysocket;
 			sourceTree = "<group>";
 		};
 		CEE0D3EB31BB4A77F320DE78 /* Pods */ = {
@@ -283,6 +323,7 @@
 					8836AE4B1DB5F686003186F0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = U7J9GRDHWQ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					8836AE611DB5F687003186F0 = {
@@ -327,7 +368,6 @@
 				88CC24751DBE670D00EACF32 /* notes.txt in Resources */,
 				8836AE5C1DB5F687003186F0 /* LaunchScreen.storyboard in Resources */,
 				8836AE591DB5F687003186F0 /* Assets.xcassets in Resources */,
-				8836AE801DB5F71C003186F0 /* Podfile in Resources */,
 				8836AE571DB5F687003186F0 /* Main.storyboard in Resources */,
 				88CC24731DBE66F700EACF32 /* json.txt in Resources */,
 			);
@@ -492,13 +532,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CC24C41DBEFD5200EACF32 /* ytcpsocket.swift in Sources */,
 				8836AE851DBCB0CF003186F0 /* Song.swift in Sources */,
+				88CC247A1DBEF18D00EACF32 /* PlaylistTableViewController.swift in Sources */,
 				8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */,
-				88CC24701DBD3EA300EACF32 /* Communicator.swift in Sources */,
-				8836AE541DB5F687003186F0 /* SecondViewController.swift in Sources */,
+				88CC24C21DBEFD5200EACF32 /* ysocket.swift in Sources */,
+				88CC24C31DBEFD5200EACF32 /* ytcpsocket.c in Sources */,
+				88CC247C1DBEF1A400EACF32 /* SettingsViewController.swift in Sources */,
+				88CC24781DBEF17B00EACF32 /* SongsTableViewController.swift in Sources */,
+				88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */,
+				88CC24701DBD3EA300EACF32 /* Library.swift in Sources */,
+				88CC24C61DBEFD5200EACF32 /* yudpsocket.swift in Sources */,
 				8836AE501DB5F687003186F0 /* AppDelegate.swift in Sources */,
 				8836AE871DBD2AE4003186F0 /* Command.swift in Sources */,
-				8836AE521DB5F687003186F0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
