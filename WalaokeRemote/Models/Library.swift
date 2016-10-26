@@ -231,4 +231,36 @@ class Library: NSObject {
         print(errmsg)
         return Promise(value: false)
     }
+    
+    public func play() -> Promise<Bool> {
+        let command = PlayCommand(JSONString: "{}")
+        command?.id = getNextId()
+        
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
+    }
+    
+    public func skip() -> Promise<Bool> {
+        let command = NextCommand(JSONString: "{}")
+        command?.id = getNextId()
+        
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
+    }
 }

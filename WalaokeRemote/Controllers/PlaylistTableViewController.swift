@@ -12,6 +12,9 @@ import Toast_Swift
 
 class PlaylistTableViewController: UITableViewController {
     
+    @IBOutlet weak var skipButton: UIBarButtonItem!
+    @IBOutlet weak var playButton: UIBarButtonItem!
+    
     var songs = [Song]()
     let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
@@ -20,6 +23,7 @@ class PlaylistTableViewController: UITableViewController {
         
         setupTabBar()
         setupSpinner()
+        setupNavigationBarButtons()
         
         refreshControl?.addTarget(self, action: #selector(SongsTableViewController.handleRefresh), for: .valueChanged)
     }
@@ -35,6 +39,15 @@ class PlaylistTableViewController: UITableViewController {
         spinner.hidesWhenStopped = true
         spinner.center = view.center
         view.addSubview(spinner)
+    }
+    
+    private func setupNavigationBarButtons() {
+        let attributes = [NSFontAttributeName: UIFont.fontAwesome(ofSize: 20)] as [String: Any]
+        skipButton.setTitleTextAttributes(attributes, for: .normal)
+        skipButton.title = String.fontAwesomeIcon(name: .forward)
+        
+        playButton.setTitleTextAttributes(attributes, for: .normal)
+        playButton.title = String.fontAwesomeIcon(name: .play)
     }
     
     func handleRefresh(refreshControl: UIRefreshControl) {
@@ -61,7 +74,7 @@ class PlaylistTableViewController: UITableViewController {
         }.always {
             self.spinner.stopAnimating()
         }.catch { error in
-            self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
         }
     }
 
@@ -100,7 +113,7 @@ class PlaylistTableViewController: UITableViewController {
                 self.refreshPlaylist()
             }
         }.catch { error in
-            self.view.makeToast("Error moving song.", duration: 2.0, position: .center)
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
         }
     }
     
@@ -112,7 +125,7 @@ class PlaylistTableViewController: UITableViewController {
                 self.refreshPlaylist()
             }
         }.catch { error in
-            self.view.makeToast("Error deleting song.", duration: 2.0, position: .center)
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
         }
     }
     
@@ -122,5 +135,25 @@ class PlaylistTableViewController: UITableViewController {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    @IBAction func tappedPlayButton(_ sender: AnyObject) {
+        Library.sharedInstance.play().then { success -> Void in
+            if success {
+                self.refreshPlaylist()
+            }
+        }.catch { error in
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
+        }
+    }
+    
+    @IBAction func tappedSkipButton(_ sender: AnyObject) {
+        Library.sharedInstance.skip().then { success -> Void in
+            if success {
+                self.refreshPlaylist()
+            }
+        }.catch { error in
+            self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
+        }
     }
 }
