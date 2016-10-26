@@ -48,7 +48,7 @@ class PlaylistTableViewController: UITableViewController {
         refreshPlaylist()
     }
     
-    func refreshPlaylist() {
+    private func refreshPlaylist() {
         if !Library.sharedInstance.connected {
             return
         }

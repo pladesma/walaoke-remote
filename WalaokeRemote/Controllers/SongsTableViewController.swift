@@ -58,7 +58,7 @@ class SongsTableViewController: UITableViewController {
         browseSongs(offset: 0, limit: searchLimit)
     }
     
-    func browseSongs(offset: Int, limit: Int) {
+    private func browseSongs(offset: Int, limit: Int) {
         if !Library.sharedInstance.connected {
             return
         }
@@ -82,7 +82,7 @@ class SongsTableViewController: UITableViewController {
         self.updateSortedSongs()
     }
     
-    func updateSortedSongs() {
+    private func updateSortedSongs() {
         var songs = Array(self.songs.values)
         songs.sort { (song1, song2) -> Bool in
             return song1.title! < song2.title!
@@ -112,7 +112,7 @@ class SongsTableViewController: UITableViewController {
         return cell
     }
     
-    func songForRow(row: Int) -> Song {
+    private func songForRow(row: Int) -> Song {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredSongs[row]
         } else {
@@ -125,7 +125,7 @@ class SongsTableViewController: UITableViewController {
         queueSongLast(song: song)
     }
     
-    func queueSongLast(song: Song) {
+    private func queueSongLast(song: Song) {
         Library.sharedInstance.queueSongLast(song: song).then { success -> Void in
             if success {
                 self.view.makeToast("Song queued.", duration: 2.0, position: .center)
@@ -153,7 +153,7 @@ class SongsTableViewController: UITableViewController {
         return [queueLast, queueFirst]
     }
     
-    func queueSongFirst(song: Song) {
+    private func queueSongFirst(song: Song) {
         Library.sharedInstance.queueSongFirst(song: song).then { success -> Void in
             if success {
                 self.view.makeToast("Song queued.", duration: 2.0, position: .center)
@@ -189,7 +189,7 @@ extension SongsTableViewController: UISearchResultsUpdating {
         }
     }
     
-    func filterSongs(searchText: String) {
+    private func filterSongs(searchText: String) {
         filteredSongs = sortedSongs.filter { song in
             return song.title!.lowercased().contains(searchText.lowercased())
         }
