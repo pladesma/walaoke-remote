@@ -13,11 +13,13 @@ import Toast_Swift
 class PlaylistTableViewController: UITableViewController {
     
     var songs = [Song]()
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabBar()
+        setupSpinner()
         
         refreshControl?.addTarget(self, action: #selector(SongsTableViewController.handleRefresh), for: .valueChanged)
     }
@@ -28,11 +30,18 @@ class PlaylistTableViewController: UITableViewController {
         self.navigationController?.tabBarController?.tabBar.items?[2].image = UIImage.fontAwesomeIcon(name: .cog, textColor: UIColor.black, size: CGSize(width: 30, height: 30))
     }
     
+    private func setupSpinner() {
+        spinner.color = UIColor.blue
+        spinner.hidesWhenStopped = true
+        spinner.center = view.center
+        view.addSubview(spinner)
+    }
+    
     func handleRefresh(refreshControl: UIRefreshControl) {
         refreshPlaylist()
         refreshControl.endRefreshing()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -44,9 +53,13 @@ class PlaylistTableViewController: UITableViewController {
             return
         }
         
+        spinner.startAnimating()
+        
         Library.sharedInstance.getPlaylist().then { songs -> Void in
             self.songs = songs
             self.tableView.reloadData()
+        }.always {
+            self.spinner.stopAnimating()
         }.catch { error in
             self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
         }
@@ -80,6 +93,8 @@ class PlaylistTableViewController: UITableViewController {
     }
     
     private func moveToFront(index: Int) {
+        spinner.startAnimating()
+        
         Library.sharedInstance.moveSongToFront(index: index).then { success -> Void in
             if (success) {
                 self.refreshPlaylist()
@@ -90,6 +105,8 @@ class PlaylistTableViewController: UITableViewController {
     }
     
     private func delete(index: Int) {
+        spinner.startAnimating()
+        
         Library.sharedInstance.deleteSong(index: index).then { success -> Void in
             if (success) {
                 self.refreshPlaylist()

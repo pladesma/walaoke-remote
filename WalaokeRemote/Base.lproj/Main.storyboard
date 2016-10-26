@@ -61,6 +61,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Queue" id="L1D-m8-sFS"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Zvb-rB-BWi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
@@ -102,6 +103,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Songs" id="C7P-1G-JdS"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="yOx-W8-UIg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
@@ -185,7 +187,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBb-BA-lwe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Queue" id="VmT-Ya-rJb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QeJ-Zc-FHH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QeJ-Zc-FHH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -204,7 +206,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Of5-6q-2TF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Songs" id="1hD-mU-Bqm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CYo-E3-DAh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CYo-E3-DAh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -223,7 +225,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6j6-Mv-tbF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="ecI-YI-9zP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vhx-CD-2ny">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vhx-CD-2ny">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

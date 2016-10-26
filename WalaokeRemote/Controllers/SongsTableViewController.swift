@@ -16,6 +16,7 @@ class SongsTableViewController: UITableViewController {
     var filteredSongs = [Song]()
     
     let searchController = UISearchController(searchResultsController: nil)
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
     let searchLimit = 100
 
@@ -23,15 +24,23 @@ class SongsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupSearchController()
+        setupSpinner()
         
         refreshControl?.addTarget(self, action: #selector(SongsTableViewController.handleRefresh), for: .valueChanged)
     }
     
-    func setupSearchController() {
+    private func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    private func setupSpinner() {
+        spinner.color = UIColor.blue
+        spinner.hidesWhenStopped = true
+        spinner.center = view.center
+        view.addSubview(spinner)
     }
     
     func handleRefresh(refreshControl: UIRefreshControl) {
@@ -45,7 +54,7 @@ class SongsTableViewController: UITableViewController {
         refreshSongs()
     }
     
-    func refreshSongs() {
+    private func refreshSongs() {
         browseSongs(offset: 0, limit: searchLimit)
     }
     
@@ -54,9 +63,13 @@ class SongsTableViewController: UITableViewController {
             return
         }
         
+        spinner.startAnimating()
+        
         Library.sharedInstance.browseSongs(offset: offset, limit: limit).then { songs -> Void in
             self.processSongResults(songs: songs)
             self.tableView.reloadData()
+        }.always {
+            self.spinner.stopAnimating()
         }.catch { error in
             self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
         }
@@ -163,10 +176,14 @@ class SongsTableViewController: UITableViewController {
 
 extension SongsTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        spinner.startAnimating()
+        
         Library.sharedInstance.searchSongs(keyword: searchController.searchBar.text, offset: 0, limit: searchLimit).then { songs -> Void in
             self.processSongResults(songs: songs)
             self.filterSongs(searchText: searchController.searchBar.text!)
             self.tableView.reloadData()
+        }.always {
+            self.spinner.stopAnimating()
         }.catch { error in
             self.view.makeToast("Failed to fetch songs.", duration: 2.0, position: .center)
         }
