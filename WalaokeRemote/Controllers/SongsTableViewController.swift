@@ -124,6 +124,41 @@ class SongsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let song = songForRow(row: indexPath.row)
+        
+        let queueLast = UITableViewRowAction(style: .normal, title: "Queue Last") { action, index in
+            self.queueSongLast(song: song)
+        }
+        queueLast.backgroundColor = UIColor.green
+    
+        let queueFirst = UITableViewRowAction(style: .normal, title: "Queue First") { action, index in
+            self.queueSongFirst(song: song)
+        }
+        queueFirst.backgroundColor = UIColor.yellow
+        
+        return [queueLast, queueFirst]
+    }
+    
+    func queueSongFirst(song: Song) {
+        Library.sharedInstance.queueSongFirst(song: song).then { success -> Void in
+            if success {
+                self.view.makeToast("Song queued.", duration: 2.0, position: .center)
+            } else {
+                self.view.makeToast("Failed to queue song.", duration: 2.0, position: .center)
+            }
+            }.catch { error in
+                self.view.makeToast(error.localizedDescription, duration: 2.0, position: .center)
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 }
 
 extension SongsTableViewController: UISearchResultsUpdating {

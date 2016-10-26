@@ -123,8 +123,25 @@ class Library: NSObject {
         return [String: Any]()
     }
     
-    public func queueSongFirst(song: Song) {
+    public func queueSongFirst(song: Song) -> Promise<Bool> {
+        let command = QueueFirstCommand(JSONString: "{}")
+        command?.sid = "\(song.sid!)"
+        command?.id = getNextId()
         
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            let stringResponse = readResponse()
+            print(stringResponse)
+            
+            print("Queued song first.")
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
     }
     
     public func queueSongLast(song: Song) -> Promise<Bool> {
