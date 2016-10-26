@@ -1,5 +1,5 @@
 //
-//  QueueLastCommand.swift
+//  DeleteSongCommand.swift
 //  WalaokeRemote
 //
 //  Created by Peter Ladesma on 10/25/16.
@@ -9,28 +9,26 @@
 import UIKit
 import ObjectMapper
 
-class QueueLastCommand: Command {
-    
-    private var _sid = ""
-    var sid: String {
+class DeleteSongCommand: Command {
+    private var _index: Int = 0
+    var index: Int {
         set {
-            _sid = newValue
-            params["SID"] = _sid
+            _index = newValue
+            params["index"] = _index
         }
         get {
-            return _sid
+            return _index
         }
     }
-
+    
     required init?(map: Map) {
         super.init(map: map)
         
-        method = "sendCommand"
+        method = "deleteSongInPlaylist"
         setupParams()
     }
     
     func setupParams() {
-        params["command"] = "ADD_SONG"
-        params["SID"] = ""
+        params["index"] = 0
     }
 }

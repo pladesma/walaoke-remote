@@ -32,6 +32,11 @@
 		88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C01DBEFD5200EACF32 /* yudpsocket.c */; };
 		88CC24C61DBEFD5200EACF32 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */; };
 		88DE751D1DBFECB700A75E02 /* GetPlaylistCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */; };
+		88DE751F1DC0270A00A75E02 /* QueueFirstCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE751E1DC0270A00A75E02 /* QueueFirstCommand.swift */; };
+		88DE75211DC0277300A75E02 /* MoveSongCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE75201DC0277300A75E02 /* MoveSongCommand.swift */; };
+		88DE75231DC0278400A75E02 /* DeleteSongCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE75221DC0278400A75E02 /* DeleteSongCommand.swift */; };
+		88DE75251DC0279D00A75E02 /* NextCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE75241DC0279D00A75E02 /* NextCommand.swift */; };
+		88DE75271DC027AC00A75E02 /* PlayCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DE75261DC027AC00A75E02 /* PlayCommand.swift */; };
 		BBCFDB2C39ACC0BAFA12582C /* Pods_WalaokeRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		88CC24C01DBEFD5200EACF32 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		88CC24C11DBEFD5200EACF32 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPlaylistCommand.swift; path = Models/GetPlaylistCommand.swift; sourceTree = "<group>"; };
+		88DE751E1DC0270A00A75E02 /* QueueFirstCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueueFirstCommand.swift; path = Models/QueueFirstCommand.swift; sourceTree = "<group>"; };
+		88DE75201DC0277300A75E02 /* MoveSongCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveSongCommand.swift; path = Models/MoveSongCommand.swift; sourceTree = "<group>"; };
+		88DE75221DC0278400A75E02 /* DeleteSongCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteSongCommand.swift; path = Models/DeleteSongCommand.swift; sourceTree = "<group>"; };
+		88DE75241DC0279D00A75E02 /* NextCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NextCommand.swift; path = Models/NextCommand.swift; sourceTree = "<group>"; };
+		88DE75261DC027AC00A75E02 /* PlayCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayCommand.swift; path = Models/PlayCommand.swift; sourceTree = "<group>"; };
 		A66F97FE4543D4EB4CEBC029 /* Pods-WalaokeRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemoteTests/Pods-WalaokeRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		B36B9692AA3BFD2768E8B53E /* Pods-WalaokeRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalaokeRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalaokeRemote/Pods-WalaokeRemote.release.xcconfig"; sourceTree = "<group>"; };
 		CFD84F51084919458777BB39 /* Pods_WalaokeRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalaokeRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +207,11 @@
 				88CC246F1DBD3EA300EACF32 /* Library.swift */,
 				88A70F071DBFAE6900F1E52F /* QueueLastCommand.swift */,
 				88DE751C1DBFECB700A75E02 /* GetPlaylistCommand.swift */,
+				88DE751E1DC0270A00A75E02 /* QueueFirstCommand.swift */,
+				88DE75201DC0277300A75E02 /* MoveSongCommand.swift */,
+				88DE75221DC0278400A75E02 /* DeleteSongCommand.swift */,
+				88DE75241DC0279D00A75E02 /* NextCommand.swift */,
+				88DE75261DC027AC00A75E02 /* PlayCommand.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -542,7 +557,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CC24C41DBEFD5200EACF32 /* ytcpsocket.swift in Sources */,
+				88DE75271DC027AC00A75E02 /* PlayCommand.swift in Sources */,
 				88A70F081DBFAE6900F1E52F /* QueueLastCommand.swift in Sources */,
+				88DE75251DC0279D00A75E02 /* NextCommand.swift in Sources */,
 				8836AE851DBCB0CF003186F0 /* Song.swift in Sources */,
 				88CC247A1DBEF18D00EACF32 /* PlaylistTableViewController.swift in Sources */,
 				8836AE891DBD2BFC003186F0 /* SearchCommand.swift in Sources */,
@@ -550,11 +567,14 @@
 				88CC24C31DBEFD5200EACF32 /* ytcpsocket.c in Sources */,
 				88DE751D1DBFECB700A75E02 /* GetPlaylistCommand.swift in Sources */,
 				88CC247C1DBEF1A400EACF32 /* SettingsViewController.swift in Sources */,
+				88DE75231DC0278400A75E02 /* DeleteSongCommand.swift in Sources */,
 				88CC24781DBEF17B00EACF32 /* SongsTableViewController.swift in Sources */,
 				88CC24C51DBEFD5200EACF32 /* yudpsocket.c in Sources */,
 				88CC24701DBD3EA300EACF32 /* Library.swift in Sources */,
+				88DE75211DC0277300A75E02 /* MoveSongCommand.swift in Sources */,
 				88CC24C61DBEFD5200EACF32 /* yudpsocket.swift in Sources */,
 				8836AE501DB5F687003186F0 /* AppDelegate.swift in Sources */,
+				88DE751F1DC0270A00A75E02 /* QueueFirstCommand.swift in Sources */,
 				8836AE871DBD2AE4003186F0 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

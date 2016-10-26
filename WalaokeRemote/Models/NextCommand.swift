@@ -1,5 +1,5 @@
 //
-//  QueueLastCommand.swift
+//  NextCommand.swift
 //  WalaokeRemote
 //
 //  Created by Peter Ladesma on 10/25/16.
@@ -7,21 +7,8 @@
 //
 
 import UIKit
-import ObjectMapper
 
-class QueueLastCommand: Command {
-    
-    private var _sid = ""
-    var sid: String {
-        set {
-            _sid = newValue
-            params["SID"] = _sid
-        }
-        get {
-            return _sid
-        }
-    }
-
+class NextCommand: Command {
     required init?(map: Map) {
         super.init(map: map)
         
@@ -30,7 +17,7 @@ class QueueLastCommand: Command {
     }
     
     func setupParams() {
-        params["command"] = "ADD_SONG"
+        params["command"] = "NEXT"
         params["SID"] = ""
     }
 }
