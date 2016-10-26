@@ -197,4 +197,38 @@ class Library: NSObject {
         return Promise(value: Array<Song>())
     }
 
+    public func moveSongToFront(index: Int) -> Promise<Bool> {
+        let command = MoveSongCommand(JSONString: "{}")
+        command?.fromPosition = index
+        command?.toPosition = 0
+        command?.id = getNextId()
+        
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
+    }
+    
+    public func deleteSong(index: Int) -> Promise<Bool> {
+        let command = DeleteSongCommand(JSONString: "{}")
+        command?.index = index
+        command?.id = getNextId()
+        
+        let jsonString = command?.toJSONString()
+        print(jsonString)
+        let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
+        
+        if (success) {
+            return Promise(value: true)
+        }
+        
+        print(errmsg)
+        return Promise(value: false)
+    }
 }

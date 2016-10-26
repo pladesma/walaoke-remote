@@ -8,6 +8,7 @@
 
 import UIKit
 import FontAwesome_swift
+import Toast_Swift
 
 class PlaylistTableViewController: UITableViewController {
     
@@ -63,5 +64,46 @@ class PlaylistTableViewController: UITableViewController {
 
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let moveFront = UITableViewRowAction(style: .normal, title: "Move to Front") { action, index in
+            self.moveToFront(index: index.row)
+        }
+        moveFront.backgroundColor = UIColor.yellow
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            self.delete(index: index.row)
+        }
+        delete.backgroundColor = UIColor.red
+        
+        return [moveFront, delete]
+    }
+    
+    private func moveToFront(index: Int) {
+        Library.sharedInstance.moveSongToFront(index: index).then { success -> Void in
+            if (success) {
+                self.refreshPlaylist()
+            }
+        }.catch { error in
+            self.view.makeToast("Error moving song.", duration: 2.0, position: .center)
+        }
+    }
+    
+    private func delete(index: Int) {
+        Library.sharedInstance.deleteSong(index: index).then { success -> Void in
+            if (success) {
+                self.refreshPlaylist()
+            }
+        }.catch { error in
+            self.view.makeToast("Error deleting song.", duration: 2.0, position: .center)
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 }

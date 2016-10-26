@@ -125,14 +125,14 @@ class SongsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let song = songForRow(row: indexPath.row)
-        
         let queueLast = UITableViewRowAction(style: .normal, title: "Queue Last") { action, index in
+            let song = self.songForRow(row: index.row)
             self.queueSongLast(song: song)
         }
         queueLast.backgroundColor = UIColor.green
     
         let queueFirst = UITableViewRowAction(style: .normal, title: "Queue First") { action, index in
+            let song = self.songForRow(row: index.row)
             self.queueSongFirst(song: song)
         }
         queueFirst.backgroundColor = UIColor.yellow
