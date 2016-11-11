@@ -95,7 +95,7 @@ class PlaylistTableViewController: UITableViewController {
         let moveFront = UITableViewRowAction(style: .normal, title: "Move to Front") { action, index in
             self.moveToFront(index: index.row)
         }
-        moveFront.backgroundColor = UIColor.yellow
+        moveFront.backgroundColor = UIColor.blue
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             self.delete(index: index.row)

@@ -148,7 +148,7 @@ class SongsTableViewController: UITableViewController {
             let song = self.songForRow(row: index.row)
             self.queueSongFirst(song: song)
         }
-        queueFirst.backgroundColor = UIColor.yellow
+        queueFirst.backgroundColor = UIColor.blue
         
         return [queueLast, queueFirst]
     }
