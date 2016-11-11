@@ -129,7 +129,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -150,7 +150,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -204,7 +204,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -221,7 +221,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -237,7 +237,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
@@ -253,7 +253,7 @@ class Library: NSObject {
         command?.id = getNextId()
         
         let jsonString = command?.toJSONString()
-        print(jsonString)
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {
