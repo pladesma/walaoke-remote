@@ -64,6 +64,7 @@ class Library: NSObject {
         command?.limit = limit
         
         let jsonString = command?.toJSONString()
+        print(jsonString!)
         let (success, errmsg) = client!.send(str: jsonString!.appending("<EOM>"))
         
         if (success) {

@@ -18,7 +18,7 @@ class SongsTableViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
-    let searchLimit = 100
+    let searchLimit = 5000
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,6 +171,10 @@ class SongsTableViewController: UITableViewController {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // TODO: Implement infinite scroll
     }
 }
 
