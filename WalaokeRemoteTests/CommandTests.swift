@@ -28,21 +28,21 @@ class CommandTests: XCTestCase {
         XCTAssertEqual(command?.id, 0)
         
         let jsonString = command?.toJSONString()
-        XCTAssertEqual(jsonString, "{\"id\":0}")
+        XCTAssertEqual(jsonString, "{\"id\":0,\"params\":{}}")
     }
     
     func testCommandPropertyChanges() {
         command?.method = "method"
         
         let jsonString = command?.toJSONString()
-        XCTAssertEqual(jsonString, "{\"id\":0,\"method\":\"method\"}")
+        XCTAssertEqual(jsonString, "{\"id\":0,\"params\":{},\"method\":\"method\"}")
     }
     
     func testSearchCommandConstruction() {
         XCTAssertEqual(searchCommand?.method, "searchSongs")
         
         let jsonString = searchCommand?.toJSONString()
-        XCTAssertEqual(jsonString, "{\"id\":0,\"method\":\"searchSongs\"}")
+        XCTAssertEqual(jsonString, "{\"id\":0,\"params\":{\"list\":0,\"findnext\":false,\"num\":30,\"keyword\":\"\"},\"method\":\"searchSongs\"}")
     }
     
 }

@@ -27,10 +27,11 @@ class LibraryTests: XCTestCase {
         super.tearDown()
     }
     
+    // This is not really a unit test. I need to create mocks/fakes.
     func testBrowseSongs() {
         library?.connectToServer().then { connected -> Void in
             if (connected) {
-                self.library?.browseSongs().then{ songs -> Void in
+                self.library?.browseSongs(offset: 0, limit: 100).then{ songs -> Void in
                     XCTAssert(songs.count > 0)
                 }.catch {error in
                     XCTFail(error.localizedDescription)
