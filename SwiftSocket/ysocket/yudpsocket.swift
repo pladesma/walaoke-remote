@@ -115,7 +115,7 @@ open class UDPClient: YSocket {
     }
     open func close()->(Bool,String){
         if let fd:Int32=self.fd{
-            c_yudpsocket_close(fd)
+            _ = c_yudpsocket_close(fd)
             self.fd=nil
             return (true,"close success")
         }else{
@@ -156,7 +156,7 @@ open class UDPServer:YSocket{
     }
     open func close()->(Bool,String){
         if let fd:Int32=self.fd{
-            c_yudpsocket_close(fd)
+            _ = c_yudpsocket_close(fd)
             self.fd=nil
             return (true,"close success")
         }else{
