@@ -35,7 +35,7 @@ class Library: NSObject {
         
         client = TCPClient(addr: ip!, port: port!)
         
-        let (success, errmsg) = client!.connect(timeout: 10)
+        let (success, errmsg) = client!.connect(timeout: 5)
         
         if (success) {
             print("Connected to server.")
