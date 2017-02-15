@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C1D1842-9EEF-46FF-A2B1-D8B035EF914C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6B5FDBD37CD743A445AF88687F3F8068AABF55D2" : "WalaokeRemote\/",
+    "6B5FDBD37CD743A445AF88687F3F8068AABF55D2" : "walaoke-remote\/",
     "9BE9D417DFF2C108330E2C3DFD9D454205A39188" : "WalaokeRemote\/Libraries\/SwiftSocket\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "WalaokeRemote",
