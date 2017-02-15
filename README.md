@@ -2,8 +2,8 @@
 iOS remote control app for use with Walaoke and R4CW
 
 ## Requirements:
-1. Walaoke (karaoke software) - [http://www.walaoke.com]
-2. RC4W (server for remotely controlling Walaoke) - [http://rc4w.blogspot.com]
+1. Walaoke (karaoke software) - http://www.walaoke.com
+2. RC4W (server for remotely controlling Walaoke) - http://rc4w.blogspot.com
 3. Walaoke compatible karaoke songs
 
 ## Setup:
